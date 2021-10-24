@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="h-100 sans-serif cf">
+        <div class="w-25 ptl phm fl h-100 bg-dark-gray white">
+          
+          <div class="fl mbl db tl">
+            <label class="db mbs tl w-50">Add Image</label>
+            <input type="file" class="tl" id="first-image" onchange="handleFileSelect()"/>
+          </div>
+
+          <div class="fl db tr">
+            <label class="db mbs tl w-75">Add Frame</label>
+            <input type="file" class="tr" id="second-image" />
+          </div>
+          
+          <button id="switch-button" class="w-100 white mtm br2 bn bg-blue pvm">Remove Frame</button>
+          <button id="download-button" class="cp link db tc w-100 white mtm br2 bn bg-teal pvm">Download Image</button>
+        </div>
+      
+        <div class="fl tc w-75 ptl sans-serif center">
+          <canvas id="canvas" class="ba tc center canvas" width="600" height="600"></canvas>
+        </div>
+      </div>
+
+
+      <input type="button" onclick="cropper.startCropping()" value="Start cropping" />
+	  	<input type="button" onclick="cropper.getCroppedImageSrc()" value="Crop" />
+      <input type="button" onclick="cropper.restore()" value="Restore" />
+
+      <script src="js/cropper_jsmin.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>
